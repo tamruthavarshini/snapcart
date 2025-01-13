@@ -1,0 +1,52 @@
+/* Product Card Container */
+.product-card {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align the content */
+  border: 1px solid #ccc; /* Add a light border */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 16px; /* Add spacing inside the card */
+  width: 285px; /* Increase card width to accommodate the description */
+  height: 295px; /* Allow flexible height based on content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  background-color: #fff; /* White background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product-image {
+  width: 245px; /* Fixed width */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Ensures image is correctly fitted */
+  border-radius: 8px; /* Optional: round image corners */
+  margin-bottom: 12px; /* Space below the image */
+}
+
+/* Product Name */
+.product-name {
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Make text bold */
+  color: #333; /* Dark gray color */
+  text-align: center; /* Center align text */
+  margin: 0; /* Remove default margin */
+  margin-bottom: 8px; /* Space between name and description */
+}
+
+/* Product Description (Truncate to 2 lines with ellipsis) */
+.product-description {
+  font-size: 14px; /* Font size for description */
+  color: #666; /* Lighter color for description */
+  text-align: center; /* Center align description */
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Hide content that exceeds the container */
+  text-overflow: ellipsis; /* Add ellipsis if content exceeds */
+  display: -webkit-box; /* Required for line clamping */
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical; /* Ensure vertical orientation */
+}

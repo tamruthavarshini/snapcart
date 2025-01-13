@@ -1,0 +1,57 @@
+.slider {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative; /* Allows positioning of the dots */
+}
+
+/* Style the slider items */
+.slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px; /* Set a max height */
+    height: calc(100vh - 50px); /* Adjust height to account for dots (50px is approximate) */
+}
+
+/* Style the images */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+/* Prevent unwanted scrolling */
+body {
+    margin: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden; /* Disable vertical scroll */
+}
+
+/* Adjust the pagination dots to avoid scrolling */
+.slick-dots {
+    position: absolute;
+    bottom: 10px; /* Adjust based on your design */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #007bff; 
+}

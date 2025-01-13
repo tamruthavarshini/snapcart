@@ -1,0 +1,70 @@
+/* .products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid 
+    gap: 20px; /* Spacing between products 
+    justify-content: center; /* Center the grid 
+  }
+  
+  .productlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Adjust width for consistent layout 
+  }
+  
+  @media (max-width: 1200px) {
+    .products-wrapper {
+      grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for smaller screens 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .products-wrapper {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for even smaller screens 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products-wrapper {
+      grid-template-columns: 1fr; 
+    }
+  }
+   */
+   .products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Initially 5 columns */
+    gap: 20px; /* Spacing between products */
+    justify-content: center; /* Center the grid */
+  }
+  
+  .productlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  @media (max-width: 1200px) {
+    .products-wrapper {
+      grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .products-wrapper {
+      grid-template-columns: repeat(3, 1fr); /* Adjust to 3 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .products-wrapper {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products-wrapper {
+      grid-template-columns: 1fr; /* Stack products in a single column on very small screens */
+    }
+  }
+  
