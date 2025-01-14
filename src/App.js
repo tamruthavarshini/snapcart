@@ -29,6 +29,8 @@ import Header from './components/Header/header';
 import HomePage from './pages/HomePage/HomePage';
 import ProductsList from './pages/ProductListPage/ProductListPage';
 import Product from './pages/ProductPage/ProductPage';
+import Login from './pages/LoginPage/LoginPage'
+
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/products/:categoryName/:categoryId" element={<ProductsList />} />
           <Route path="/product/:category_id/:product_id" element={<Product />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>
