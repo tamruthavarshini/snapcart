@@ -33,12 +33,12 @@ export const getProductDetails = createAsyncThunk(
   async ({ categoryId, product_id }, { rejectWithValue }) => {
     console.log(categoryId+" "+ product_id+ " "+PRODUCT_DETAILS_GET_URL);
     try {
-      // Ensure params are being passed correctly without any extra characters
+      
       const response = await axios.get(PRODUCT_DETAILS_GET_URL, {
-        params: { categoryId, product_id },  // Send both categoryId and product_id as query parameters
+        params: { categoryId, product_id },  
       });
 
-      console.log("API Response:", response.data);  // Log response data
+      console.log("API Response:", response.data);  
 
       if (response.status !== 200) {
         throw new Error("Failed to fetch product details");
@@ -46,7 +46,7 @@ export const getProductDetails = createAsyncThunk(
 
       return response.data.data;
     } catch (error) {
-      console.error("Error fetching product details:", error);  // Log any errors
+      console.error("Error fetching product details:", error);  
       return rejectWithValue(
         error.response?.data?.message || error.message
       );

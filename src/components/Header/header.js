@@ -7,6 +7,7 @@ import { TextField, InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
+import { Favorite } from "@mui/icons-material";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -30,10 +31,15 @@ const Header = () => {
           <PersonIcon style={{ marginRight: '5px' ,transform: 'translateY(5px)'}} />
           Login
         </Link>
+        <Link to="/favorite" className="nav-link">
+          <Favorite style={{ marginRight: '5px'  ,transform: 'translateY(5px)' }} />
+          Favorite
+        </Link>
         <Link to="/cart" className="nav-link">
           <ShoppingCartIcon style={{ marginRight: '5px'  ,transform: 'translateY(5px)' }} />
           Cart
         </Link>
+        
       </nav>
     </header>
   );

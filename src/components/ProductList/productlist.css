@@ -1,52 +1,63 @@
-/* Product Card Container */
 .product-card {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center align the content */
-  border: 1px solid #ccc; /* Add a light border */
-  border-radius: 8px; /* Slightly rounded corners */
-  padding: 16px; /* Add spacing inside the card */
-  width: 285px; /* Increase card width to accommodate the description */
-  height: 295px; /* Allow flexible height based on content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  background-color: #fff; /* White background */
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 285px;
+  height: 295px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 20px;
 }
 
 .product-card:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Product Image */
 .product-image {
-  width: 245px; /* Fixed width */
-  height: 180px; /* Fixed height */
-  object-fit: cover; /* Ensures image is correctly fitted */
-  border-radius: 8px; /* Optional: round image corners */
-  margin-bottom: 12px; /* Space below the image */
+  width: 145px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  
 }
 
-/* Product Name */
 .product-name {
-  font-size: 16px; /* Adjust font size */
-  font-weight: bold; /* Make text bold */
-  color: #333; /* Dark gray color */
-  text-align: center; /* Center align text */
-  margin: 0; /* Remove default margin */
-  margin-bottom: 8px; /* Space between name and description */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  
+  height: 30px;
 }
 
-/* Product Description (Truncate to 2 lines with ellipsis) */
-.product-description {
-  font-size: 14px; /* Font size for description */
-  color: #666; /* Lighter color for description */
-  text-align: center; /* Center align description */
-  margin: 0; /* Remove default margin */
-  overflow: hidden; /* Hide content that exceeds the container */
-  text-overflow: ellipsis; /* Add ellipsis if content exceeds */
-  display: -webkit-box; /* Required for line clamping */
-  -webkit-line-clamp: 2; /* Limit to 2 lines */
-  -webkit-box-orient: vertical; /* Ensure vertical orientation */
+.productlist .product-description {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  height:37px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.productlist .final-cost{
+  font-size: 15px;
+  white-space: nowrap;
+  font-weight: bolder;
+}
+.productlist .off-percentage{
+  font-size: 15px;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+.productlist .strike-price{
+  font-size: 13px;
 }

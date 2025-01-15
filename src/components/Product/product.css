@@ -7,6 +7,15 @@
   overflow: hidden;
   padding: 20px;
 }
+.size-text{
+  margin-right: 80px;
+}
+
+.strike-cost {
+  color: #063263;
+  text-decoration: line-through;
+  color: #999;
+}
 
 .product-thumbnails {
   display: flex;
@@ -24,7 +33,7 @@
   object-fit: contain;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease;
-  border: 2px solid transparent;
+  
 }
 
 .thumbnail-image:hover {
@@ -46,29 +55,56 @@
 .selected-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;  
   border-radius: 8px;
-  border: 2px solid #ccc;
+  border: 2px solid #000;  
 }
+
 
 .product-details {
   width: 45%;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
   align-items: flex-start;
 }
 
 .product-description {
-  font-size: 16px;
+  font-size: 20px;
   color: #666;
 }
 
-.product-cost .strike-price {
+.product-cost {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0px;
+}
+
+.product .final-cost {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.strike-price {
+  color: gray;
+  font-size: 1rem;
   text-decoration: line-through;
-  color: #999;
-  margin-left: 5px;
+  margin-left: 0px;
+}
+
+.product .off-percentage {
+  color: #063263;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.tax-included {
+  margin: 0px;
+  margin-left: 20px;
+  color: #2e7d32;
 }
 
 .product-discount {
@@ -81,4 +117,70 @@
   font-size: 22px;
   font-weight: bold;
   color: #2e7d32;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #063263;
+  margin: 20px 0;
+  width: 100%;
+}
+.variant-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: #063263;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left:10px;
+  font-size: 17px;
+  text-align: center;
+  border:2px solid;
+}
+.variant-circle:hover{
+  cursor:pointer;
+  background-color: #063263;
+  color: white;
+}
+
+.cart-option,
+.wishlist-option {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 25px;
+  padding: 10px;
+  width: 250px;
+  border-radius: 25px / 50%;
+  border: 2px solid;
+  background-color: #063263;
+  margin: 40px;
+  margin-right: 0px;
+}
+
+.cart-option span,
+.wishlist-option span {
+  padding-left: 10px;
+  position: relative;
+  color: white;
+ 
+}
+
+.cart-option:hover,
+.wishlist-option:hover {
+  cursor: pointer;
+  background-color: white;
+  
+  
+}
+.cart-option:hover span,
+.wishlist-option:hover  span{
+  color: #063263;
+}
+
+.wishlist-option{
+  margin-bottom: 10px;
 }
